@@ -16,5 +16,10 @@ namespace cmdS
         {
             InitializeComponent();
         }
+
+        private void cmdYes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

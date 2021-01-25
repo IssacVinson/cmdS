@@ -29,13 +29,25 @@ namespace cmdS
         /// </summary>
         private void InitializeComponent()
         {
+            this.cmdYes = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // cmdYes
+            // 
+            this.cmdYes.Location = new System.Drawing.Point(411, 177);
+            this.cmdYes.Name = "cmdYes";
+            this.cmdYes.Size = new System.Drawing.Size(75, 23);
+            this.cmdYes.TabIndex = 0;
+            this.cmdYes.Text = "Yes";
+            this.cmdYes.UseVisualStyleBackColor = true;
+            this.cmdYes.Click += new System.EventHandler(this.cmdYes_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 931);
+            this.Controls.Add(this.cmdYes);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -43,6 +55,8 @@ namespace cmdS
         }
 
         #endregion
+
+        private System.Windows.Forms.Button cmdYes;
     }
 }
 
