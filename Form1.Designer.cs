@@ -1,5 +1,7 @@
 ﻿
-namespace cmdS
+using System;
+
+namespace testingCmdS
 {
     partial class testingCmds
     {
@@ -29,113 +31,148 @@ namespace cmdS
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCare = new System.Windows.Forms.Label();
-            this.txtCare = new System.Windows.Forms.TextBox();
-            this.lblComfort = new System.Windows.Forms.Label();
-            this.txtComfort = new System.Windows.Forms.TextBox();
-            this.lblFood = new System.Windows.Forms.Label();
-            this.txtFood = new System.Windows.Forms.TextBox();
-            this.lblPositive = new System.Windows.Forms.Label();
-            this.txtPositive = new System.Windows.Forms.TextBox();
+            this.cmdAdd = new System.Windows.Forms.Button();
+            this.cmdSub = new System.Windows.Forms.Button();
+            this.cmdMultipy = new System.Windows.Forms.Button();
+            this.cmdDiv = new System.Windows.Forms.Button();
+            this.cmdClr = new System.Windows.Forms.Button();
+            this.txtVal1 = new System.Windows.Forms.TextBox();
+            this.txtVal2 = new System.Windows.Forms.TextBox();
+            this.lblVal1 = new System.Windows.Forms.Label();
+            this.lblVal2 = new System.Windows.Forms.Label();
+            this.lblAns = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblCare
+            // cmdAdd
             // 
-            this.lblCare.AutoSize = true;
-            this.lblCare.Location = new System.Drawing.Point(72, 65);
-            this.lblCare.Name = "lblCare";
-            this.lblCare.Size = new System.Drawing.Size(425, 25);
-            this.lblCare.TabIndex = 0;
-            this.lblCare.Text = "How was your provider\'s patient care? 1-10";
+            this.cmdAdd.Location = new System.Drawing.Point(827, 384);
+            this.cmdAdd.Name = "cmdAdd";
+            this.cmdAdd.Size = new System.Drawing.Size(116, 48);
+            this.cmdAdd.TabIndex = 0;
+            this.cmdAdd.Text = "Add";
+            this.cmdAdd.UseVisualStyleBackColor = true;
+            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click);
             // 
-            // txtCare
+            // cmdSub
             // 
-            this.txtCare.Location = new System.Drawing.Point(77, 113);
-            this.txtCare.Name = "txtCare";
-            this.txtCare.Size = new System.Drawing.Size(272, 31);
-            this.txtCare.TabIndex = 1;
-            this.txtCare.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.cmdSub.Location = new System.Drawing.Point(827, 457);
+            this.cmdSub.Name = "cmdSub";
+            this.cmdSub.Size = new System.Drawing.Size(116, 49);
+            this.cmdSub.TabIndex = 1;
+            this.cmdSub.Text = "Subtract";
+            this.cmdSub.UseVisualStyleBackColor = true;
+            this.cmdSub.Click += new System.EventHandler(this.cmdSub_Click);
             // 
-            // lblComfort
+            // cmdMultipy
             // 
-            this.lblComfort.AutoSize = true;
-            this.lblComfort.Location = new System.Drawing.Point(72, 181);
-            this.lblComfort.Name = "lblComfort";
-            this.lblComfort.Size = new System.Drawing.Size(641, 25);
-            this.lblComfort.TabIndex = 2;
-            this.lblComfort.Text = "Do you feel your provider established a comfortable environment?";
-            this.lblComfort.Click += new System.EventHandler(this.label1_Click);
+            this.cmdMultipy.Location = new System.Drawing.Point(827, 530);
+            this.cmdMultipy.Name = "cmdMultipy";
+            this.cmdMultipy.Size = new System.Drawing.Size(116, 40);
+            this.cmdMultipy.TabIndex = 2;
+            this.cmdMultipy.Text = "Multiply";
+            this.cmdMultipy.UseVisualStyleBackColor = true;
+            this.cmdMultipy.Click += new System.EventHandler(this.cmdMultipy_Click);
             // 
-            // txtComfort
+            // cmdDiv
             // 
-            this.txtComfort.Location = new System.Drawing.Point(77, 249);
-            this.txtComfort.Name = "txtComfort";
-            this.txtComfort.Size = new System.Drawing.Size(272, 31);
-            this.txtComfort.TabIndex = 3;
+            this.cmdDiv.Location = new System.Drawing.Point(827, 593);
+            this.cmdDiv.Name = "cmdDiv";
+            this.cmdDiv.Size = new System.Drawing.Size(116, 46);
+            this.cmdDiv.TabIndex = 3;
+            this.cmdDiv.Text = "Divide";
+            this.cmdDiv.UseVisualStyleBackColor = true;
+            this.cmdDiv.Click += new System.EventHandler(this.cmdDiv_Click);
             // 
-            // lblFood
+            // cmdClr
             // 
-            this.lblFood.AutoSize = true;
-            this.lblFood.Location = new System.Drawing.Point(77, 340);
-            this.lblFood.Name = "lblFood";
-            this.lblFood.Size = new System.Drawing.Size(436, 25);
-            this.lblFood.TabIndex = 4;
-            this.lblFood.Text = "How can we improve the quality of our food?";
+            this.cmdClr.Location = new System.Drawing.Point(776, 662);
+            this.cmdClr.Name = "cmdClr";
+            this.cmdClr.Size = new System.Drawing.Size(167, 66);
+            this.cmdClr.TabIndex = 4;
+            this.cmdClr.Text = "Clear";
+            this.cmdClr.UseVisualStyleBackColor = true;
             // 
-            // txtFood
+            // txtVal1
             // 
-            this.txtFood.Location = new System.Drawing.Point(82, 412);
-            this.txtFood.Name = "txtFood";
-            this.txtFood.Size = new System.Drawing.Size(267, 31);
-            this.txtFood.TabIndex = 5;
+            this.txtVal1.Location = new System.Drawing.Point(324, 384);
+            this.txtVal1.Name = "txtVal1";
+            this.txtVal1.Size = new System.Drawing.Size(100, 31);
+            this.txtVal1.TabIndex = 5;
+            this.txtVal1.TextChanged += new System.EventHandler(this.txtVal1_TextChanged);
             // 
-            // lblPositive
+            // txtVal2
             // 
-            this.lblPositive.AutoSize = true;
-            this.lblPositive.Location = new System.Drawing.Point(82, 493);
-            this.lblPositive.Name = "lblPositive";
-            this.lblPositive.Size = new System.Drawing.Size(479, 25);
-            this.lblPositive.TabIndex = 6;
-            this.lblPositive.Text = "What is one positve experience provided to you?";
-            this.lblPositive.Click += new System.EventHandler(this.lblPositive_Click);
+            this.txtVal2.Location = new System.Drawing.Point(561, 384);
+            this.txtVal2.Name = "txtVal2";
+            this.txtVal2.Size = new System.Drawing.Size(100, 31);
+            this.txtVal2.TabIndex = 6;
+            this.txtVal2.TextChanged += new System.EventHandler(this.txtVal2_TextChanged);
             // 
-            // txtPositive
+            // lblVal1
             // 
-            this.txtPositive.Location = new System.Drawing.Point(82, 565);
-            this.txtPositive.Name = "txtPositive";
-            this.txtPositive.Size = new System.Drawing.Size(267, 31);
-            this.txtPositive.TabIndex = 7;
+            this.lblVal1.AutoSize = true;
+            this.lblVal1.Location = new System.Drawing.Point(319, 316);
+            this.lblVal1.Name = "lblVal1";
+            this.lblVal1.Size = new System.Drawing.Size(85, 25);
+            this.lblVal1.TabIndex = 7;
+            this.lblVal1.Text = "Value 1";
+            // 
+            // lblVal2
+            // 
+            this.lblVal2.AutoSize = true;
+            this.lblVal2.Location = new System.Drawing.Point(572, 315);
+            this.lblVal2.Name = "lblVal2";
+            this.lblVal2.Size = new System.Drawing.Size(85, 25);
+            this.lblVal2.TabIndex = 8;
+            this.lblVal2.Text = "Value 2";
+            // 
+            // lblAns
+            // 
+            this.lblAns.AutoSize = true;
+            this.lblAns.Location = new System.Drawing.Point(435, 498);
+            this.lblAns.Name = "lblAns";
+            this.lblAns.Size = new System.Drawing.Size(83, 25);
+            this.lblAns.TabIndex = 9;
+            this.lblAns.Text = "Answer";
+            this.lblAns.Click += new System.EventHandler(this.label1_Click);
             // 
             // testingCmds
             // 
-            this.ClientSize = new System.Drawing.Size(1326, 966);
-            this.Controls.Add(this.txtPositive);
-            this.Controls.Add(this.lblPositive);
-            this.Controls.Add(this.txtFood);
-            this.Controls.Add(this.lblFood);
-            this.Controls.Add(this.txtComfort);
-            this.Controls.Add(this.lblComfort);
-            this.Controls.Add(this.txtCare);
-            this.Controls.Add(this.lblCare);
+            this.ClientSize = new System.Drawing.Size(1327, 1068);
+            this.Controls.Add(this.lblAns);
+            this.Controls.Add(this.lblVal2);
+            this.Controls.Add(this.lblVal1);
+            this.Controls.Add(this.txtVal2);
+            this.Controls.Add(this.txtVal1);
+            this.Controls.Add(this.cmdClr);
+            this.Controls.Add(this.cmdDiv);
+            this.Controls.Add(this.cmdMultipy);
+            this.Controls.Add(this.cmdSub);
+            this.Controls.Add(this.cmdAdd);
             this.Name = "testingCmds";
-            this.Text = "1w";
+            this.Load += new System.EventHandler(this.testingCmds_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        private void testingCmds_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
-        private System.Windows.Forms.Button cmdYes;
-        private System.Windows.Forms.Button cmdNo;
-        private System.Windows.Forms.Label lblCare;
-        private System.Windows.Forms.TextBox txtCare;
-        private System.Windows.Forms.Label lblComfort;
-        private System.Windows.Forms.TextBox txtComfort;
-        private System.Windows.Forms.Label lblFood;
-        private System.Windows.Forms.TextBox txtFood;
-        private System.Windows.Forms.Label lblPositive;
-        private System.Windows.Forms.TextBox txtPositive;
+        private System.Windows.Forms.Button cmdAdd;
+        private System.Windows.Forms.Button cmdSub;
+        private System.Windows.Forms.Button cmdMultipy;
+        private System.Windows.Forms.Button cmdDiv;
+        private System.Windows.Forms.Button cmdClr;
+        private System.Windows.Forms.TextBox txtVal1;
+        private System.Windows.Forms.TextBox txtVal2;
+        private System.Windows.Forms.Label lblVal1;
+        private System.Windows.Forms.Label lblVal2;
+        private System.Windows.Forms.Label lblAns;
     }
 }
 
