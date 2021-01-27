@@ -8,29 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace testingCmdS;
+namespace testingCalc
 {
     public partial class testingCmds : Form
-    {
-       
-        int Num1;
+{
+
+    int Num1;
         int Num2;
         string operation;
         int Ans;
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        {}
 
         private void txtVal1_TextChanged(object sender, EventArgs e)
         {
-            Num1 = Console.ReadLine(txtVal1);
-        }
+            Num1 = Convert.ToInt32(Console.ReadLine());
+    }
 
         private void txtVal2_TextChanged(object sender, EventArgs e)
         {
-            Num2 = Console.ReadLine(txtVal2);
-        }
+            Num2 = Convert.ToInt32(Console.ReadLine());
+    }
         private void cmdAdd_Click(object sender, EventArgs e)
         {
             Ans = Num1+Num2;
@@ -52,5 +50,12 @@ namespace testingCmdS;
             Ans = Num1/Num2;
             lblAns.Text = Num1 + "/" + Num2 + "=" + Ans;
         }
+
+    private void cmdClr_Click(object sender, EventArgs e)
+    {
+        txtVal1.Text = "";
+        txtVal2.Text = "";
+        lblAns.Text = "";
     }
+}
 }

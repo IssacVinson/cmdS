@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace testingCmdS
+namespace testingCalc
 {
     partial class testingCmds
     {
@@ -91,6 +91,7 @@ namespace testingCmdS
             this.cmdClr.TabIndex = 4;
             this.cmdClr.Text = "Clear";
             this.cmdClr.UseVisualStyleBackColor = true;
+            this.cmdClr.Click += new System.EventHandler(this.cmdClr_Click);
             // 
             // txtVal1
             // 
