@@ -69,28 +69,28 @@ namespace cmdS
                 {
                     Ans = Num1 + Num2;
                     lblAns.Text = Num1 + "+" + Num2 + "=" + Ans;
-                    txtVal1.Text = Ans;
+                    //txtVal1.Text = Ans;
                     txtVal2.Select();
                 }
                 else if (operationType == "subtract")
                 {
                     Ans = Num1 - Num2;
                     lblAns.Text = Num1 + "-" + Num2 + "=" + Ans;
-                    txtVal1.Text = Ans;
+                    //txtVal1.Text = Ans;
                     txtVal2.Select();
                 }
                 else if (operationType == "multiply")
                 {
                     Ans = Num1 * Num2;
                     lblAns.Text = Num1 + "*" + Num2 + "=" + Ans;
-                    txtVal1.Text = Ans;
+                    //txtVal1.Text = Ans;
                     txtVal2.Select();
                 }
                 else if (operationType == "divide")
                 {
                     Ans = Num1 / Num2;
                     lblAns.Text = Num1 + "/" + Num2 + "=" + Ans;
-                    txtVal1.Text = Ans;
+                    //txtVal1.Text = Ans;
                     txtVal2.Select();
                 }
             
