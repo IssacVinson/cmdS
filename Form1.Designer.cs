@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace testingCalc
+namespace cmdS
 {
     partial class testingCmds
     {
@@ -155,11 +155,6 @@ namespace testingCalc
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void testingCmds_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
