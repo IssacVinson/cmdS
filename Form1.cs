@@ -30,13 +30,12 @@ namespace cmdS
 
         private void txtVal1_TextChanged(object sender, EventArgs e)
         {
-            //Num1 = Convert.ToInt32(txtVal1.Text);
-            //TryParse
+           
         }
 
         private void txtVal2_TextChanged(object sender, EventArgs e)
         {
-            //Num2 = Convert.ToInt32(Console.ReadLine());
+           
         }
         private void cmdAdd_Click(object sender, EventArgs e)
         {
@@ -69,28 +68,32 @@ namespace cmdS
                 {
                     Ans = Num1 + Num2;
                     lblAns.Text = Num1 + "+" + Num2 + "=" + Ans;
-                    //txtVal1.Text = Ans;
+                    txtVal1.Text = "" + Ans;
+                    txtVal2.Text = "";
                     txtVal2.Select();
                 }
                 else if (operationType == "subtract")
                 {
                     Ans = Num1 - Num2;
                     lblAns.Text = Num1 + "-" + Num2 + "=" + Ans;
-                    //txtVal1.Text = Ans;
+                    txtVal1.Text = "" + Ans;
+                    txtVal2.Text = "";
                     txtVal2.Select();
                 }
                 else if (operationType == "multiply")
                 {
                     Ans = Num1 * Num2;
                     lblAns.Text = Num1 + "*" + Num2 + "=" + Ans;
-                    //txtVal1.Text = Ans;
+                    txtVal1.Text = "" + Ans;
+                    txtVal2.Text = "";
                     txtVal2.Select();
                 }
                 else if (operationType == "divide")
                 {
                     Ans = Num1 / Num2;
                     lblAns.Text = Num1 + "/" + Num2 + "=" + Ans;
-                    //txtVal1.Text = Ans;
+                    txtVal1.Text = "" + Ans;
+                    txtVal2.Text = "";
                     txtVal2.Select();
                 }
             
