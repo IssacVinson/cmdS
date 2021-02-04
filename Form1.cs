@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace cmdS
 {
     public partial class testingCmds : Form
-{
+    {
 
-    float Num1;
+        float Num1;
         float Num2;
         float Ans;
 
@@ -21,21 +15,18 @@ namespace cmdS
         {
             InitializeComponent();
         }
-        private void testingCmds_Load(object sender, EventArgs e)
-        {
 
-        }
         private void label1_Click(object sender, EventArgs e)
-        {}
+        { }
 
         private void txtVal1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtVal2_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
         private void cmdAdd_Click(object sender, EventArgs e)
         {
@@ -45,7 +36,7 @@ namespace cmdS
         {
             DoOperation(Num1, Num2, "subtract");
         }
-    
+
         private void cmdMultipy_Click(object sender, EventArgs e)
         {
             DoOperation(Num1, Num2, "multiply");
@@ -96,21 +87,102 @@ namespace cmdS
                     txtVal2.Text = "";
                     txtVal2.Select();
                 }
-            
+
             }
             else
             {
-                lblAns.Text = "You need to only enter numbers!";
+                lblAns.Text = "You need to enter numbers!";
 
             }
         }
 
-    private void cmdClr_Click(object sender, EventArgs e)
-    {
-        txtVal1.Text = "";
-        txtVal2.Text = "";
-        lblAns.Text = "";
+        private void cmdClr_Click(object sender, EventArgs e)
+        {
+            txtVal1.Text = "";
+            txtVal2.Text = "";
+            lblAns.Text = "";
             txtVal1.Select();
+        }
+        private void WriteWindowDimensions()
+        {
+            // Store the path of the textfile in your system
+
+            string file = AppDomain.CurrentDomain.BaseDirectory + "AppSettings.txt";
+
+
+
+            // To write all of the text to the file
+
+            string text = "MainFormHeight=" + this.Height + "\r\n";
+            text = text + "MainFormWidth=" + this.Width;
+
+            File.WriteAllText(file, text);
+
+
+
+        }
+
+
+        private void testingCmds_ResizeEnd_1(object sender, EventArgs e)
+        {
+            WriteWindowDimensions();
+
+        }
+        void SetComponents()
+        {
+            foreach (Control item in Controls) ;
+            {
+                float x = 
+                
+                
+                if (item is Button )
+                {
+                    cmdAdd.Bounds = Control.Width / 16;
+                    cmdClr.Width = this.Width / 16;
+                    cmdDiv.Width = this.Width / 16;
+                    cmdMultipy.Width = this.Width / 16;
+                    cmdSub.Width = this.Width / 16;
+                }
+            }
+        }
+        private void testingCmds_Resize_1(object sender, EventArgs e)
+        {
+ 
+            SetComponents();
+
+        }
+
+        private void testingCmds_Load(object sender, EventArgs e)
+        {
+            using (StreamReader reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "AppSettings.txt"))
+            {
+                string line = "";
+
+
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (line.StartsWith("MainFormWidth="))
+                    {
+                        string[] chunks = line.Split('=');
+                        int width = this.Width;
+                        if (Int32.TryParse(chunks[1], out width))
+                        {
+                            this.Width = width;
+
+                        }
+                    }
+                    else if (line.StartsWith("MainFormHeight="))
+                    {
+                        string[] chunks = line.Split('=');
+                        int height = this.Height;
+                        if (Int32.TryParse(chunks[1], out height))
+                        {
+                            this.Height = height;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-}
+

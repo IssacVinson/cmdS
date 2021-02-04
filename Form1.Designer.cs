@@ -45,9 +45,9 @@ namespace cmdS
             // 
             // cmdAdd
             // 
-            this.cmdAdd.Location = new System.Drawing.Point(827, 384);
+            this.cmdAdd.Location = new System.Drawing.Point(1064, 1);
             this.cmdAdd.Name = "cmdAdd";
-            this.cmdAdd.Size = new System.Drawing.Size(116, 48);
+            this.cmdAdd.Size = new System.Drawing.Size(266, 215);
             this.cmdAdd.TabIndex = 0;
             this.cmdAdd.Text = "Add";
             this.cmdAdd.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@ namespace cmdS
             // 
             // cmdSub
             // 
-            this.cmdSub.Location = new System.Drawing.Point(827, 457);
+            this.cmdSub.Location = new System.Drawing.Point(1064, 213);
             this.cmdSub.Name = "cmdSub";
-            this.cmdSub.Size = new System.Drawing.Size(116, 49);
+            this.cmdSub.Size = new System.Drawing.Size(266, 202);
             this.cmdSub.TabIndex = 1;
             this.cmdSub.Text = "Subtract";
             this.cmdSub.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@ namespace cmdS
             // 
             // cmdMultipy
             // 
-            this.cmdMultipy.Location = new System.Drawing.Point(827, 530);
+            this.cmdMultipy.Location = new System.Drawing.Point(1064, 467);
             this.cmdMultipy.Name = "cmdMultipy";
             this.cmdMultipy.Size = new System.Drawing.Size(116, 40);
             this.cmdMultipy.TabIndex = 2;
@@ -152,6 +152,7 @@ namespace cmdS
             this.Controls.Add(this.cmdAdd);
             this.Name = "testingCmds";
             this.Load += new System.EventHandler(this.testingCmds_Load);
+            this.ResizeEnd += new System.EventHandler(this.testingCmds_ResizeEnd_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
