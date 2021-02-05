@@ -153,6 +153,7 @@ namespace cmdS
             this.Name = "testingCmds";
             this.Load += new System.EventHandler(this.testingCmds_Load);
             this.ResizeEnd += new System.EventHandler(this.testingCmds_ResizeEnd_1);
+            this.Resize += new System.EventHandler(this.testingCmds_Resize_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

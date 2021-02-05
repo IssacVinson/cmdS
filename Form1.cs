@@ -130,20 +130,71 @@ namespace cmdS
         }
         void SetComponents()
         {
-            foreach (Control item in Controls) ;
-            {
-                float x = 
-                
-                
-                if (item is Button )
-                {
-                    cmdAdd.Bounds = Control.Width / 16;
-                    cmdClr.Width = this.Width / 16;
-                    cmdDiv.Width = this.Width / 16;
-                    cmdMultipy.Width = this.Width / 16;
-                    cmdSub.Width = this.Width / 16;
-                }
-            }
+            int formHeight = this.Height;
+            int formWidth = this.Width;
+            int vertGap = this.Height / 100;
+            int horGap = this.Width / 100;
+
+            // set height, width, top, left of cmdAdd
+            cmdAdd.Left = formWidth / 12;
+            cmdAdd.Top = formHeight / 10;
+            cmdAdd.Width = formWidth / 8;
+            cmdAdd.Height = formHeight / 8;
+             
+
+            // set height, width, top, left of cmdSub
+            cmdSub.Left = formWidth / 12;
+            cmdSub.Top = formHeight / 8 + vertGap * 15;
+            cmdSub.Width = formWidth / 8; 
+            cmdSub.Height = formHeight / 8;
+
+            // set height, width, top, left of cmdMultiply
+            cmdMultipy.Left = formWidth / 12;
+            cmdMultipy.Top = formHeight / 8 + vertGap * 33;
+            cmdMultipy.Width = formWidth / 8;
+            cmdMultipy.Height = formHeight / 8;
+
+            // set height, width, top, left of cmdDiv
+            cmdDiv.Left = formWidth / 12;
+            cmdDiv.Top = formHeight / 8 + vertGap * 51;
+            cmdDiv.Width = formWidth / 8;
+            cmdDiv.Height = formHeight / 8;
+
+            // set height, width, top, left of cmdClr
+            cmdClr.Left = formWidth / 12;
+            cmdClr.Top = formHeight / 8 + vertGap * 70;
+            cmdClr.Width = formWidth / 8;
+            cmdClr.Height = formHeight / 8;
+
+            // set height, width, top, left of txtVal1
+            txtVal1.Left = formWidth / 4 + horGap * 12;
+            txtVal1.Top = formHeight / 2 - vertGap * 25;
+            txtVal1.Width = formWidth / 8;
+            txtVal1.Height = formHeight / 8;
+
+            // set height, width, top, left of txtVal2
+            txtVal2.Left = formWidth / 4 + horGap * 45;
+            txtVal2.Top = formHeight / 2 - vertGap * 25;
+            txtVal2.Width = formWidth / 8;
+            txtVal2.Height = formHeight / 8;
+
+            // set height, width, top, left of lblAns
+            lblAns.Left = formWidth / 2;
+            lblAns.Top = formHeight / 2;
+            lblAns.Width = formWidth / 8;
+            lblAns.Height = formHeight / 8;
+
+            // set height, width, top, left of lblVal1
+            lblVal1.Left = formWidth / 4 + horGap * 12;
+            lblVal1.Top = formHeight / 2 - vertGap * 30;
+            lblVal1.Width = formWidth / 8;
+            lblVal1.Height = formHeight / 8;
+
+            // set height, width, top, left of lblVal2
+            lblVal2.Left = formWidth / 4 + horGap * 45;
+            lblVal2.Top = formHeight / 2 - vertGap * 30;
+            lblVal2.Width = formWidth / 8;
+            lblVal2.Height = formHeight / 8;
         }
         private void testingCmds_Resize_1(object sender, EventArgs e)
         {
